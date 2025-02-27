@@ -40,6 +40,7 @@ RUN git clone https://github.com/sunsmarterjie/yolov12.git
 WORKDIR /work/yolov12
 RUN wget https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.3/flash_attn-2.7.3+cu11torch2.2cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
 RUN pip install -r requirements.txt
+RUN pip install -e .
 #COPY . .
 #RUN sed -i '/^\[http "https:\/\/github\.com\/"\]/,+1d' .git/config
 #ADD https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt .
